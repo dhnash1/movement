@@ -15,6 +15,7 @@ application.controller('Test', ['$scope', '$http', function ($scope, $http){
     var xPos = Math.round(0.5 * xMax);
     var yPos = Math.round(0.5 * yMax);
     console.log("x:" + xPos + " Y:" + yPos);
+    $scope.set(xPos, yPos);
 
     $scope.move = function(dir){
       console.log(dir);
@@ -34,6 +35,7 @@ application.controller('Test', ['$scope', '$http', function ($scope, $http){
        else {
         console.log("wall");
       }
+      $scope.set(xPos, yPos);
     };
   };
   $scope.tog = "On";
@@ -57,7 +59,8 @@ $scope.toggle = function (){
   }
 };
 
-$scope.movement = function(){
-
+$scope.set = function(x,y){
+  $scope.xP = x;
+  $scope.yP = y;
 };
 }]);
