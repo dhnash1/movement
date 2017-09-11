@@ -8,8 +8,23 @@
   </head>
   <body ng-app="application">
     <div ng-controller="Test">
-    <h1>Heres the title</h1>
-    </div>
+      <h1>Heres the title</h1>
+      <button type="button" name="button" ng-click="printy()">Hullo</button>
+      <button type="button" name="button" ng-click="toggle()">{{tog}}</button>
 
+    <input type="text" name="" value="" placeholder="X" ng-model="x">
+    <input type="text" name="" value="" placeholder="Y" ng-model="y">
+    <button type="button" name="button" ng-click="start()"> Start!</button>
+    <div>
+      <button type="button" name="button" ng-click="move('up')">Up</button>
+    </div>
+    <div>
+      <button type="button" name="button" ng-click="move('left')">Left</button>
+      <button type="button" name="button" ng-click="move('right')">Right</button>
+    </div>
+    <div>
+      <button type="button" name="button" ng-click = "move('down')">Down</button>
+      </div>
+    </div>
   </body>
 </html>
